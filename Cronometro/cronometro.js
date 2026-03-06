@@ -29,6 +29,7 @@ let running = false;
 let pausedAux = false;
 let startTime = null;
 let timePaused = 0;
+let refInMS
 
 let ref = document.querySelector('#ref')
 let b0 = document.querySelector('#b0');
@@ -54,9 +55,11 @@ let currentTime = 0
 let timeDisplay = document.querySelector('#timeDisplay')
 
 function setTimeDisplayValue() {
-  let elapsedTime = "Date.now() - startTime"
+  let elapsedTime
   if (running) {
-    elapsedTime = Date.now() - startTime
+    if (timer) elapsedTime = refInMS - (Date.now() - startTime)
+    else elapsedTime = Date.now() - startTime
+    console.log(refInMS)
     result = parseElapsedTime(elapsedTime)
     timeDisplay.innerHTML = `${result}`
   }
@@ -74,7 +77,7 @@ function parseElapsedTime(value) {
   let str = `${value}`
   let ms = str.substring(str.length - 3, str.length - 1)
 
-  if (seconds >= Number(refValue.substring(2, 4)) && minutes >= Number(refValue.substring(0, 2))) {
+  if (refInMS <= (Date.now() - startTime)) {
     handleStop()
     return refValue.substring(0, 2) + '  :  ' + refValue.substring(2, 4) + '  : 00'
   }
@@ -142,6 +145,9 @@ function handleStart() {
   console.log("Starting");
   setStartTime();
   if (bstart.value == "Start") {
+    console.log(refValue.substring(2, 4) * 60)
+    refInMS = (Number(refValue.substring(0, 2)) * 60 + Number(refValue.substring(2, 4))) * 1000
+    console.log(refInMS)
     bstart.value = "Stop";
     running = true
     timePaused = 0;
