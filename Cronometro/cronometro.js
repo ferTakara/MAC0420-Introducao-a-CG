@@ -112,6 +112,7 @@ function setButtonsListeners(buttons) {
   cl.addEventListener('click', handleClear)
   bstart.addEventListener('click', handleStart)
   bpause.addEventListener('click', handlePause)
+  bcrono.addEventListener('click', handleCrono)
 }
 
 function setButtonListener(button) {
@@ -121,13 +122,17 @@ setButtonsListeners(buttons)
 
 // Crono -------------------------------------------------------
 
-function handleStart() {
-  if (bstart.value == "Stop") {
+function handleCrono() {
+  if (bstart.value == "Start") {
     console.log("Changing type");
     if (bcrono.value == "Crono") {
-      bstart.value = "Timer";
+      bcrono.value = "Timer";
+      timer = true
     }
-    else handleStop();
+    else {
+      bcrono.value = "Crono"
+      timer = false
+    }
   }
 }
 
