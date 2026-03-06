@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>LAB01 de MAC0420/MA5744 - Cronômetro e Temporizador</title>
+	<link rel="stylesheet" href="estilo.css" />
+	<script src="cronometro.js" defer></script>
+</head>
+
+<body>
+	<center>
+		<h2>LAB01 - MAC0420/MAC5744</h2>
+		<p></p>
+		<hr>
+		<p></p>
+
+		<div class='tt'>
+			<label>Tempo: <input type="text" id="ref" value="    00:00" size="8" /> </label>
+			<!--
+    <input type="button" id= "bEnter" height="16px" value="Enter" />
+    -->
+		</div>
+
+
+		<table>
+			<tr>
+				<td>
+					<input class="plain" type="button" id= "b7" value="7" />
+        </td>
+				<td>
+					<input class="plain" type="button" id= "b8" value="8" />
+        </td>
+				<td>
+					<input class="plain" type="button" id= "b9" value="9" />
+        </td>
+			</tr>
+			<tr>
+				<td>
+					<input class="plain" type="button" id= "b4" value="4" />
+        </td>
+				<td>
+					<input class="plain" type="button" id= "b5" value="5" />
+        </td>
+				<td>
+					<input class="plain" type="button" id= "b6" value="6" />
+        </td>
+			</tr>
+			<tr>
+				<td>
+					<input class="plain" type="button" id= "b1" value="1" />
+        </td>
+				<td>
+					<input class="plain" type="button" id= "b2" value="2" />
+        </td>
+				<td>
+					<input class="plain" type="button" id= "b3" value="3" />
+        </td>
+			</tr>
+			<tr>
+				<td>&nbsp;
+				</td>
+				<td>
+					<input class="plain" type="button" id= "b0" value="0" />
+        </td>
+				<td>
+					<input class="cl" type="button" id= "cl" value="Cl" />
+        </td>
+			</tr>
+		</table>
+
+		<p></p>
+		<hr>
+		<label>
+            <h1 id="timeDisplay"> 00 : 00 : 00</h1>
+        </label>
+		<p></p>
+		<hr>
+		<p></p>
+
+
+		<table>
+			<tr>
+				<td>
+					<input class="ss" type="button" id= "bcrono" value="Crono" />
+            </td>
+				<td>
+					<input class="ss" type="button" id= "bstart" value="Start" />
+            </td>
+				<td>
+					<input class="ss" type="button" id= "bpause" value="Pause" />
+            </td>
+			</tr>
+		</table>
+	</center>
+</body>
+
+</html>
+
+
+
+<!--
+
+    DICAS: developer mozilla tutorials
+
+    https://developer.mozilla.org/en-US/docs/Learn/HTML
+
+    JavaScript
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+    https://developer.mozilla.org/en-US/docs/Learn/JavaScript
+
+    Resize canvas
+    https://webglfundamentals.org/webgl/lessons/webgl-resizing-the-canvas.html
+-->
