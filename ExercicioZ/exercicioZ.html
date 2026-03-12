@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Meu canvas</title>
+    <link rel="stylesheet" href="./estilo.css" type="text/css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!--  comentário em html -->
+    <h1>Exercício Z - 12 de março 2026 </h1>
+
+    <h3> Cor e Lado do quadrado</h3>
+
+    <input id="Barra R" type="range" value="127" min="0" max="255" step="1" name="Vermelho"></input>
+<label for="redLabel">Red</label>
+
+<input id="Barra G" type="range" value="127" min="0" max="255" step="1" name="Verde"></input>
+<label for="greenLabel">Green</label>
+
+<input id="Barra B" type="range" value="127" min="0" max="255" step="1" name="Azul"></input>
+<label for="blueLabel">Blue</label>
+<br>
+<input id="Lado" type="range" value="20" min="10" max="100" step="1" name="Lado"></input>
+<label for="LadoLabel">Lado</label>
+<br>
+<p></p>
+<h3>Movimentação</h3>
+
+<p></p>
+&ensp; &ensp; &ensp;<input id="Botao_C" class="styled" type="button" value="^"></input>
+<p></p>
+<input id="Botao_E" class="styled" type="button" value="<"></input>
+&ensp; &ensp; &ensp;
+<input id="Botao_D" class="styled" type="button" value=">"></input>
+<p></p>
+&ensp; &ensp; &ensp; <input id="Botao_B" class="styled" type="button" value="V"></input>
+<p></p>
+<input id="Passo" type="range" value="5" min="1" max="50" step="1" name="Passo"></input>
+<label for="PassoLabel">Passo</label>
+<br>
+
+<h3>Canvas</h3>
+    <hr>
+    <!-- 
+        IMPORTANTE 
+        O CANVAS 
+        ;-) 
+        -->
+    <canvas id="meucanvas" width="400" height="400">Opa! pode ser que seu navegador não suporte o canvas do HTML5.</canvas>
+    <p></p>
+    <hr>
+
+  </body>
+</html>
